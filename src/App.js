@@ -9,9 +9,6 @@ function App() {
   );
   let passwordMinLength = 7;
   let passwordMaxLength = 31;
-
-
-
   let validate = isValidate ? 'True' : "false"
 
   function StringChallenge(str) {
