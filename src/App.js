@@ -7,12 +7,15 @@ function App() {
   const pattern = new RegExp(
     "^(?=.*[a-z])(?=.*[A-Z])(?=.*\\d)(?=.*[-+_!@#$%^&*.,?]).+$"
   );
+  let passwordMinLength = 7;
+  let passwordMaxLength = 31;
+
 
 
   let validate = isValidate ? 'True' : "false"
 
   function StringChallenge(str) {
-    if (str.length < 7 || str.length > 31) {
+    if (str.length < passwordMinLength || str.length > passwordMaxLength) {
       return false;
     } else if (str.includes("password")) {
       return false;
@@ -24,10 +27,8 @@ function App() {
 
   const handleClick = () => {
     let isValid = StringChallenge(password.current.value);
-    console.log(isValid, "hhhhhh");
     setValidation(isValid);
 
-    console.log(isValidate);
   };
 
   return (
