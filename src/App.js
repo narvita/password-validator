@@ -7,9 +7,9 @@ function App() {
   const pattern = new RegExp(
     "^(?=.*[a-z])(?=.*[A-Z])(?=.*\\d)(?=.*[-+_!@#$%^&*.,?]).+$"
   );
-  let passwordMinLength = 7;
-  let passwordMaxLength = 31;
-  let validate = isValidate ? 'True' : "false"
+  const passwordMinLength = 7;
+  const passwordMaxLength = 31;
+  const validate = isValidate ? 'True' : "false"
 
   function StringChallenge(str) {
     if (str.length < passwordMinLength || str.length > passwordMaxLength) {
